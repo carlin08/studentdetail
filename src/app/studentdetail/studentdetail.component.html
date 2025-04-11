@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: #343a40;
+            padding-top: 20px;
+            color: white;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #007bff;
+        }
+        .container {
+            margin-left: 270px;
+            margin-top: 20px;
+            width: calc(100% - 280px);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .page-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px; 
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            height: 40px;
+        }
+        textarea {
+            height: 50px;
+        }
+        .btn-primary {
+            width: 100%;
+            height: 45px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h4 class="text-center">Admin Panel</h4>
+        <hr>
+        <a href="#">Home</a>
+        <a href="#">View/Edit Profile</a>
+        <a href="#">Notify Staff</a>
+        <a href="#">Notify Student</a>
+        <a href="#">Add Staff</a>
+        <a href="#">Manage Staff</a>
+        <a href="#" class="bg-primary">Add Student</a>
+        <a href="#">Manage Student</a>
+        <a href="#">Add Task</a>
+        <a href="#">Manage Tasks</a>
+        <a href="#">Add Course</a>
+        <a href="#">Manage Course</a>
+        <a href="#">Add Subject</a>
+        <a href="#">Manage Subject</a>
+        <a href="#">Add Session</a>
+        <a href="#">Manage Session</a>
+        <a href="#">View Attendance</a>
+        <a href="#">Student Feedback</a>
+        <a href="#">Staff Feedback</a>
+        <a href="#">Student Leave</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="page-title">Add Student</div>
+        <div class="form-header">Add Student</div>
+        <form>
+            <div class="row mb-3">
+                <label for="firstname" class="col-sm-6 col-form-label">First Name:</label>
+                <div class="col-sm-15">
+                    <input type="text" class="form-control" id="firstname" name="firstname" required>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="email" class="col-sm-6 col-form-label">Email:</label>
+                <div class="col-sm-15">
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="gender" class="col-sm-6 col-form-label">Gender:</label>
+                <div class="col-sm-15">
+                    <select class="form-select" id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="password" class="col-sm-6 col-form-label">Password:</label>
+                <div class="col-sm-15">
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="profile-pic" class="col-sm-6 col-form-label">Profile Picture:</label>
+                <div class="col-sm-15">
+                    <input type="file" class="form-control" id="profile-pic" name="profile-pic">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="address" class="col-sm-6 col-form-label">Address:</label>
+                <div class="col-sm-15">
+                    <textarea class="form-control" id="address" name="address"></textarea>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="course" class="col-sm-6 col-form-label">Course:</label>
+                <div class="col-sm-15">
+                    <input type="text" class="form-control" id="course" name="course">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="session" class="col-sm-6 col-form-label">Session:</label>
+                <div class="col-sm-15">
+                    <input type="text" class="form-control" id="session" name="session">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="Phone Number" class="col-sm-6 col-form-label">Phone Number:</label>
+                <div class="col-sm-15">
+                    <input type="number" class="form-control" id="Phone Number" name="Phone Number">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="College Name" class="col-sm-6 col-form-label">College Name:</label>
+                <div class="col-sm-15">
+                    <input type="text" class="form-control" id="College Name" name="College Name">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="Passed Out Year" class="col-sm-6 col-form-label">Passed out Year:</label>
+                 <div class="col-sm-15">
+                    <input type="number" class="form-control" id="Passed Out Year" name="Passed Out Year">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="Degree" class="col-sm-6 col-form-label">Degree:</label>
+                <div class="col-sm-15">
+                    <input type="text" class="form-control" id="Degree" name="Degree">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="Department" class="col-sm-6 col-form-label">Department:</label>
+                <div class="col-sm-15">
+                    <input type="text" class="form-control" id="Department" name="Department">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="Mode of Internship" class="col-sm-6 col-form-label">Mode of Internship:</label>
+                <div class="col-sm-15">
+                     <input type="text" class="form-control" id="Mode of Internship" name="Mode of Internship">
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Add Student</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
